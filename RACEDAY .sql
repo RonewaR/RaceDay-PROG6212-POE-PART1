@@ -7,7 +7,7 @@ BEGIN
     CREATE DATABASE RaceDayDB;
 END
 GO 
-USE RaceDayDB;
+USE RaceDayDB; 
 GO
 
 DROP TABLE IF EXISTS Payments;
