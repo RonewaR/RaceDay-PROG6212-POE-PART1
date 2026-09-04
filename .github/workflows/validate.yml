@@ -1,13 +1,8 @@
-name: RaceDay Repository Validation
+name: RaceDay Validation
 
 on:
   push:
-    branches:
-      - main
   pull_request:
-    branches:
-      - main
-  workflow_dispatch:
 
 jobs:
   validate:
@@ -18,15 +13,14 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Check required files
-        shell: bash
         run: |
-          echo "Checking RaceDay repository structure..."
+          echo "Checking RaceDay assignment files..."
 
-          test -d docs
-          test -f docs/ERD.png
-          test -f docs/API_Endpoint_Plan.md
-          test -f docs/RaceDayDB.sql
-          test -f README.md
+          test -f "API ENDPOINT PLAN.PDF"
+          test -f "RACEDAY. SQL"
+          test -f "RACEDAY ERD.jpg"
 
-          echo "All required files are present."
-          echo "RaceDay repository validation successful."
+          echo "All required RaceDay files are present."
+
+      - name: Validation successful
+        run: echo "RaceDay validation passed successfully!"
