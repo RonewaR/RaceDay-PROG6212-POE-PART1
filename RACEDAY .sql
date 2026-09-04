@@ -35,7 +35,7 @@ CREATE TABLE Events (
     Description VARCHAR(500) NULL,
     EventDate DATETIME NOT NULL,
     Location VARCHAR(200) NOT NULL,
-    ImageUrl VARCHAR(500) NULL,
+    ImageUrl VARCHAR(500) NULL, 
     CreatedAt DATETIME NOT NULL DEFAULT GETDATE(),
     CONSTRAINT FK_Events_Users FOREIGN KEY (OrganiserId) 
         REFERENCES Users(UserId) ON DELETE CASCADE
