@@ -32,7 +32,3 @@ The `/docs` folder contains:
 ## CI/CD
 
 GitHub Actions is used to validate the required repository structure and documentation files.
-
-## Video Presentation
-
-YouTube link will be added here after the video is uploaded.
