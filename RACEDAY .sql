@@ -8,7 +8,7 @@ BEGIN
 END
 GO 
 USE RaceDayDB; 
-GO
+GO 
 
 DROP TABLE IF EXISTS Payments; 
 DROP TABLE IF EXISTS Results;
