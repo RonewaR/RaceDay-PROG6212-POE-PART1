@@ -3,7 +3,7 @@
 -- ========================================================
 
 IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'RaceDayDB')
-BEGIN
+BEGIN 
     CREATE DATABASE RaceDayDB; 
 END
 GO 
