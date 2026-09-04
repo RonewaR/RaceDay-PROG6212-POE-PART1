@@ -32,3 +32,5 @@ The `/docs` folder contains:
 ## CI/CD
 
 GitHub Actions is used to validate the required repository structure and documentation files.
+The workflow checks that the '/docs' folder and required project files are present. 
+![Successful GitHub Actions Build] <img width="1358" height="363" alt="github-actions-success" src="https://github.com/user-attachments/assets/0f52f3cf-f42b-49b3-b019-b74b77419fd0" /> 
