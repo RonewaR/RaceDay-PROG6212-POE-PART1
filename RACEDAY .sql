@@ -4,7 +4,7 @@
 
 IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'RaceDayDB')
 BEGIN
-    CREATE DATABASE RaceDayDB;
+    CREATE DATABASE RaceDayDB; 
 END
 GO 
 USE RaceDayDB; 
