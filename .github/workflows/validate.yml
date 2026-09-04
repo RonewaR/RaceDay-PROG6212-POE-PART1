@@ -14,13 +14,29 @@ jobs:
 
       - name: Check required files
         run: |
-          echo "Checking RaceDay assignment files..."
+          echo "Checking RaceDay files..."
 
-          test -f "API ENDPOINT PLAN.PDF"
-          test -f "RACEDAY. SQL"
-          test -f "RACEDAY ERD.jpg"
+          echo "Files in repository:"
+          find . -maxdepth 3 -type f -print
 
-          echo "All required RaceDay files are present."
+          echo "Checking for assignment files..."
+
+          find . -iname "*.pdf" | grep -qi "api" || {
+            echo "ERROR: API Endpoint Plan PDF not found"
+            exit 1
+          }
+
+          find . -iname "*.sql" | grep -qi "raceday" || {
+            echo "ERROR: RaceDay SQL file not found"
+            exit 1
+          }
+
+          find . -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" | grep -qi "raceday" || {
+            echo "ERROR: RaceDay ERD image not found"
+            exit 1
+          }
+
+          echo "All required files were found!"
 
       - name: Validation successful
         run: echo "RaceDay validation passed successfully!"
