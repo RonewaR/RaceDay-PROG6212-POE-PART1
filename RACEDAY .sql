@@ -1,7 +1,7 @@
 -- ========================================================
 -- PROG6212 POE PART 1 
 -- ========================================================
-
+ 
 IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'RaceDayDB')
 BEGIN 
     CREATE DATABASE RaceDayDB; 
